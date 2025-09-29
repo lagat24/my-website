@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Services — MySite</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">MySite</a>
+    <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
+    <nav class="nav" id="siteNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html" aria-current="page" class="active">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Services</h1>
+  <p class="intro-text">I offer a range of web development services designed to help individuals, startups, and small businesses build a strong online presence.</p>
+
+  <div class="grid services-grid">
+    <article class="service-card">
+      <h3>🌐 Website Development</h3>
+      <p>Static and small dynamic websites built with modern HTML, CSS, and JavaScript — perfect for portfolios, landing pages, or small business sites.</p>
+      <a class="btn" href="contact.html">Request Quote</a>
+    </article>
+
+    <article class="service-card">
+      <h3>⚡ Performance Optimization</h3>
+      <p>Improve site loading speed, accessibility, and SEO ranking through optimized assets, clean code, and best practices.</p>
+      <a class="btn" href="contact.html">Request Quote</a>
+    </article>
+
+    <article class="service-card">
+      <h3>🛠 Maintenance & Support</h3>
+      <p>Ongoing website updates, bug fixes, and enhancements to keep your site running smoothly and securely.</p>
+      <a class="btn" href="contact.html">Request Quote</a>
+    </article>
+
+    <article class="service-card">
+      <h3>🚀 Deployment & Hosting</h3>
+      <p>Deploy your site to GitHub Pages, Netlify, or Vercel with CI/CD setup for easy future updates.</p>
+      <a class="btn" href="contact.html">Request Quote</a>
+    </article>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2025 MySite. Built with love by Me.</p>
+  </div>
+</footer>
+
+<script>
+  // Toggle mobile navigation
+  document.getElementById('navToggle').addEventListener('click', function() {
+    const nav = document.getElementById('siteNav');
+    nav.classList.toggle('open');
+    this.setAttribute('aria-expanded', nav.classList.contains('open'));
+  });
+</script>
+</body>
+</html>

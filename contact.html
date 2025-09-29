@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — MySite</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">MySite</a>
+    <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
+    <nav class="nav" id="siteNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html" aria-current="page" class="active">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <h1>Contact</h1>
+
+  <!-- Contact Info Section -->
+  <section class="contact-info">
+    <p>You can reach me directly via:</p>
+    <ul class="contact-list">
+      <li><strong>Email:</strong> <a href="mailto:lagati1001@gmail.com">lagati1001@gmail.com</a></li>
+      <li><strong>Phone:</strong> <a href="tel:+254741227584">+254 741 227 584</a></li>
+      <li><strong>Location:</strong> Nairobi, Kenya</li>
+    </ul>
+  </section>
+
+  <hr class="section-divider">
+
+  <!-- Contact Form Section -->
+  <section class="form-section">
+    <h2>Send me a message</h2>
+    <form id="contactForm" class="contact-form" novalidate>
+      <label for="name">Name</label>
+      <input id="name" name="name" required minlength="2" placeholder="Your full name">
+
+      <label for="email">Email</label>
+      <input id="email" type="email" name="email" required placeholder="you@example.com">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" required minlength="10" placeholder="Write your message here..."></textarea>
+
+      <button type="submit" class="btn">Send message</button>
+      <p id="formMessage" aria-live="polite"></p>
+    </form>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2025 MySite. Built with love by Me.</p>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script>
+  // Simple client-side validation feedback
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const formMessage = document.getElementById('formMessage');
+    if (this.checkValidity()) {
+      formMessage.textContent = "✅ Your message has been sent!";
+      formMessage.style.color = "green";
+      this.reset();
+    } else {
+      formMessage.textContent = " Please fill in all fields correctly.";
+      formMessage.style.color = "red";
+    }
+  });
+
+  // Mobile nav toggle
+  document.getElementById('navToggle').addEventListener('click', function() {
+    const nav = document.getElementById('siteNav');
+    nav.classList.toggle('open');
+    this.setAttribute('aria-expanded', nav.classList.contains('open'));
+  });
+</script>
+</body>
+</html>

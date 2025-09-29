@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>About — MySite</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="logo" href="index.html">MySite</a>
+    <button id="navToggle" class="nav-toggle" aria-expanded="false" aria-label="Open menu">☰</button>
+    <nav class="nav" id="siteNav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" aria-current="page" class="active">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="bio">
+    <div class="bio-header">
+      <img src="images/avatar.png" alt="Photograph of me" class="avatar" width="120">
+      <div class="bio-text">
+        <h1>About Me</h1>
+        <p>Hi, I’m Collins — a freelance web developer passionate about building fast, accessible websites and web apps. 
+           My goal is to create experiences that are clean, user-friendly, and easy to maintain.</p>
+      </div>
+    </div>
+
+    <h2>Skills</h2>
+    <ul class="skills">
+      <li>HTML5 & Semantic Markup</li>
+      <li>CSS3 & Responsive Design</li>
+      <li>JavaScript (ES6+)</li>
+      <li>React / Vue Basics</li>
+      <li>Node.js & REST APIs</li>
+      <li>Git & GitHub</li>
+    </ul>
+
+    <h2>Education & Experience</h2>
+    <div class="timeline">
+      <div class="timeline-item">
+        <span class="year">2024 — Present</span>
+        <p><strong>Freelance Web Developer</strong> — Worked on multiple client projects, delivering responsive landing pages, dashboards, and e-commerce sites.</p>
+      </div>
+      <div class="timeline-item">
+        <span class="year">2020 — 2024</span>
+        <p><strong>Bachelor’s Degree in Computer Science</strong> — Learned programming fundamentals, web development, and software engineering best practices.</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© 2025 MySite. Built with love by Me.</p>
+  </div>
+</footer>
+
+<script>
+  // Toggle mobile navigation
+  document.getElementById('navToggle').addEventListener('click', function() {
+    const nav = document.getElementById('siteNav');
+    nav.classList.toggle('open');
+    this.setAttribute('aria-expanded', nav.classList.contains('open'));
+  });
+</script>
+</body>
+</html>
