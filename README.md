@@ -1,4 +1,4 @@
-________________________________________
+
  My Website – Portfolio Project
 This is my final web development assignment — a fully responsive, multipage portfolio website built with HTML5, CSS3, and JavaScript. It showcases my work, provides information about me, and lets users get in touch.
  Project Structure
